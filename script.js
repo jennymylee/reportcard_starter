@@ -257,14 +257,28 @@ function addCourseRowToReportCard(reportCardTableElement, course, rowNum) {
  * This function should add HTML for the totals row in the report card.
  */
 function addTotalsRow(reportCardTableElement) {
-  reportCardTableElement.innerHTML += ``;
+  reportCardTableElement.innerHTML += `<div class="table-row totals even">
+  <h4 class="code-col"></h4>
+  <h4 class="name-col"></h4>
+  <h4 class="sem-col">Totals:</h4>
+  <h4 id="total-credits" class="cred-col"> ? credits </h4>
+  <h4 class="lett-col"></h4>
+  <h4 id="total-pts" class="pts-col">?</h4>
+</div> `;
 }
 
 /**
  * This function should add HTML for the final row in the report card.
  */
 function addGpaRow(reportCardTableElement) {
-  reportCardTableElement.innerHTML += ``;
+  reportCardTableElement.innerHTML += `<div class="table-row gpa odd">
+  <h4 class="code-col"></h4>
+  <h4 class="name-col"></h4>
+  <h4 class="sem-col">GPA:</h4>
+  <h4 class="cred-col"></h4>
+  <h4 class="lett-col"></h4>
+  <h4 id="gpa" class="pts-col"> ?</h4>               
+</div> `;
 }
 
 /**
@@ -290,6 +304,8 @@ function updateReportCard(reportCardTableElement, currentSemester) {
   studentData[currentSemester].forEach((course, i) =>
     addCourseRowToReportCard(reportCardTableElement, course, i + 1)
   );
+  addTotalsRow(reportCardTable);
+  addGpaRow(reportCardTable);
 }
 
 /**
