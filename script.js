@@ -245,7 +245,9 @@ function addCourseRowToReportCard(reportCardTableElement, course, rowNum) {
       course.credits
     }</span> credits</h4>
     <h4 class="lett-col gpa">${course.grade}</h4>
-    <h4 id="gpa-${rowNum + 1}" class="pts-col">?</h4>
+    <h4 id="gpa-${rowNum + 1}" class="pts-col">${
+    gpaPointsLookup[course.grade]
+  }</h4>
     
   </div>
   `;
