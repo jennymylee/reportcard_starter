@@ -15,7 +15,7 @@ const studentInformation = {
   advisor: "John Doe",
   major: "Computer Science",
   graduationYear: "2024",
-  imageUrl: "avartar.png",
+  imageUrl: "avatar.png",
 };
 
 let semester = "Spring Semester";
