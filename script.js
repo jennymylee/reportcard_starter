@@ -304,8 +304,8 @@ function updateReportCard(reportCardTableElement, currentSemester) {
   studentData[currentSemester].forEach((course, i) =>
     addCourseRowToReportCard(reportCardTableElement, course, i + 1)
   );
-  addTotalsRow(reportCardTable);
-  addGpaRow(reportCardTable);
+  addTotalsRow(reportCardTableElement);
+  addGpaRow(reportCardTableElement);
 }
 
 /**
